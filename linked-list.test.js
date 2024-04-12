@@ -37,3 +37,17 @@ test('Pop elements', () => {
     expect(linkedList.pop()).toBe(undefined);
     expect(linkedList.length).toBe(0);
 })
+
+test('Unshift elements', () => {
+    const linkedList = new LinkedList(5);
+
+    linkedList.unshift(0);
+    expect(linkedList.length).toBe(2);
+    expect(linkedList.head).toEqual({ value: 0, next: { value: 5, next: null }});
+
+    linkedList.pop();
+    linkedList.pop();
+    linkedList.unshift(15);
+    expect(linkedList.length).toBe(1);
+    expect(linkedList.head.value).toBe(15);
+})
