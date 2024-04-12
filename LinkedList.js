@@ -43,6 +43,19 @@ class LinkedList {
         return temp;
     }
 
+    unshift(value) {
+        const node = new LinkedListNode(value);
+        if (!this.head) {
+            this.head = node;
+            this.tail = node;
+        } else {
+            node.next = this.head;
+            this.head = node;
+        }
+        this.length++;
+        return this;
+    }
+
     // printList() {
     //     let temp = this.head;
     //     while (temp !== null) {
