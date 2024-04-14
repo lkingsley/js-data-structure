@@ -61,6 +61,17 @@ class LinkedList {
         return this;
     }
 
+    shift() {
+        if (!this.head) return null;
+        const temp = this.head;
+        this.head = temp.next;
+        this.length--;
+
+        if (this.length === 0) this.tail = null;
+        temp.next = null;
+        return temp;
+    }
+
     // printList() {
     //     let temp = this.head;
     //     while (temp !== null) {
