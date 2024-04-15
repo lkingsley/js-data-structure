@@ -56,6 +56,25 @@ class LinkedList {
         return this;
     }
 
+    get(index) {
+        if (index < 0 || index > this.length-1) return null;
+        
+        let temp = this.head;
+        for (let i = 0; i < index; i++) {
+            temp = temp.next;
+        }
+        return temp;
+    }
+
+    set(index, value) {
+        let node = this.get(index);
+        if (node) {
+            node.value = value;
+            return true;
+        }
+        
+        return false;
+    }
 
 }
 
