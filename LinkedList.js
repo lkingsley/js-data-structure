@@ -1,4 +1,6 @@
 class LinkedListNode {
+    value;
+    next;
     constructor(value) {
         this.value = value;
         this.next = null;
@@ -6,6 +8,9 @@ class LinkedListNode {
 }
 
 class LinkedList {
+    head;
+    tail;
+    length;
     constructor(value) {
         const newNode = new LinkedListNode(value);
         this.head = newNode;
