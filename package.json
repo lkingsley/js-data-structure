@@ -1,13 +1,14 @@
 {
-  "name": "data-structure",
+  "name": "js-data-structure",
   "version": "1.0.0",
   "description": "",
-  "main": "EXERCISE-LL-Constructor.js",
+  "main": "LinkedList.js",
+  "type": "commonjs",
   "scripts": {
     "test": "jest"
   },
   "keywords": [],
-  "author": "",
+  "author": "lkingsley00@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
