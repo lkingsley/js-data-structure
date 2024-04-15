@@ -1,4 +1,10 @@
-const { LinkedList } = require("./LinkedList")
+const { LinkedList, LinkedListNode } = require("./LinkedList")
+
+
+test('Create LinkedListNode', () => {
+    const node = new LinkedListNode(1);
+    expect(node).toEqual({ value: 1, next: null });
+});
 
 test('Creates a linkedList', () => {
     const linkedList = new LinkedList(5);
