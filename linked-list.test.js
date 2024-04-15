@@ -52,6 +52,29 @@ test('Unshift elements', () => {
     expect(linkedList.head.value).toBe(15);
 })
 
+test('Shift elements', () => {
+    const node = new LinkedList(5);
+    node.push(10);
+    node.push(15);
+    const firstShift = node.shift();
+
+    expect(firstShift).toEqual({ value: 5, next: null});
+    expect(node.head.value).toBe(10);
+    expect(node.length).toBe(2);
+
+    node.shift();
+    expect(node.length).toBe(1);
+    expect(node.head.next).toBe(null);
+
+    node.shift();
+    expect(node.head).toBe(null);
+    expect(node.tail).toBe(null);
+    expect(node.length).toBe(0);
+
+    expect(node.shift()).toBe(null);
+    expect(node.length).toBe(0);
+});
+
 test('Get element', () => {
     const linkedList = new LinkedList(5);
     linkedList.push(10);
